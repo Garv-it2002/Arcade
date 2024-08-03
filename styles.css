@@ -20,12 +20,15 @@ body {
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: relative;
+    flex-shrink: 0; /* Prevents shrinking of the header */
+    flex-direction: column; /* Stack items vertically on small screens */
+    text-align: center;
 }
 
 .header-icon {
     width: 60px;
     height: 60px;
-    margin-right: 15px;
+    margin-bottom: 10px; /* Adjust spacing for stacked layout */
     border-radius: 50%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -45,6 +48,7 @@ body {
     box-sizing: border-box;
     background: rgba(255, 255, 255, 0.8); /* Semi-transparent background for content readability */
     border-radius: 8px;
+    overflow: auto; /* Ensure scrolling if content overflows */
 }
 
 /* Medal Section Styling */
@@ -57,12 +61,14 @@ body {
     justify-content: space-around;
     align-items: center;
     margin-bottom: 20px;
+    flex-wrap: wrap; /* Wraps items if they overflow */
 }
 
 .medal-item {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 10px; /* Adds spacing around items */
 }
 
 .medal {
@@ -107,9 +113,17 @@ body {
     background-color: #cd7f32; /* Bronze */
 }
 
+.table-wrapper {
+    overflow-x: auto; /* Adds horizontal scrollbar */
+    -webkit-overflow-scrolling: touch; /* For smoother scrolling on mobile */
+    width: 100%; /* Ensures the wrapper takes full width */
+    box-sizing: border-box; /* Ensures padding/margins are included in width */
+    padding: 0; /* Remove padding if necessary */
+}
+
 /* Table Styling with Frosted Glass Effect */
 table {
-    width: 100%;
+    width: 100%; /* Ensures table takes full width of the wrapper */
     border-collapse: collapse;
     margin-top: 20px;
     background: rgba(255, 255, 255, 0.3); /* Semi-transparent white */
@@ -118,6 +132,7 @@ table {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: table; /* Ensures table layout */
 }
 
 table, th, td {
@@ -191,21 +206,40 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .header {
+        padding: 15px;
+    }
+
+    .header-icon {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 10px;
+    }
+
+    .header h1 {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .table-wrapper {
+        overflow-x: auto; /* Ensures horizontal scrollbar */
+        padding: 0;
+    }
+
     table {
         display: block;
+        width: 100%;
         overflow-x: auto;
         white-space: nowrap;
     }
 
     th, td {
-        display: block;
+        display: table-cell; /* Ensures horizontal alignment */
         text-align: left;
         padding: 10px;
-    }
-
-    th {
-        background-color: rgba(42, 42, 42, 0.9); /* Google Blue with opacity */
-        color: white;
     }
 
     .medal-container {
@@ -234,8 +268,31 @@ footer {
 }
 
 @media (max-width: 480px) {
-    h1 {
-        font-size: 1.5rem;
+    .header {
+        padding: 10px;
+    }
+
+    .header-icon {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 10px;
+    }
+
+    .header h1 {
+        font-size: 1.2rem;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .table-wrapper {
+        overflow-x: auto; /* Ensures horizontal scrollbar */
+        padding: 0;
+    }
+
+    table {
+        font-size: 0.8rem;
     }
 
     th, td {
