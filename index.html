@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Profile Display</title>
+        <!-- Tailwind CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.1/dist/tailwind.min.css" rel="stylesheet">
+        <!-- Font Awesome for icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <!-- Google Fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+        <!-- Material Icons -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <!-- AOS Animation Library -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+        <!-- Custom Styles -->
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body class="bg-gray-100 text-gray-800 flex flex-col min-h-screen font-['Roboto']">
+    <!-- Header Section -->
+    <header class="header">
+        <img src="logo.png" alt="Google Cloud Arcade Icon" class="header-icon">
+        <h1>Google Cloud Arcade Facilitator Program 2024</h1>
+    </header>
+
+    <div class="container">
+        <!-- Medal Display Section -->
+        <section class="medal-section">
+            <h2>Top Performers</h2>
+            <div class="medal-container">
+                <div class="medal-item">
+                    <div class="medal gold">
+                        <span class="material-icons">emoji_events</span>
+                    </div>
+                    <div class="medal-name" id="goldMedal">Gold Medalist</div>
+                </div>
+                <div class="medal-item">
+                    <div class="medal silver">
+                        <span class="material-icons">emoji_events</span>
+                    </div>
+                    <div class="medal-name" id="silverMedal">Silver Medalist</div>
+                </div>
+                <div class="medal-item">
+                    <div class="medal bronze">
+                        <span class="material-icons">emoji_events</span>
+                    </div>
+                    <div class="medal-name" id="bronzeMedal">Bronze Medalist</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Table Section -->
+        <table id="profileTable">
+            <thead>
+                <tr>
+                    <th>User Name</th>
+                    <th>Profile URL</th>
+                    <th>Profile Status</th>
+                    <th>Access Code Redemption Status</th>
+                    <th>Milestones</th>
+                    <th>Skill Badges</th>
+                    <th>Arcade Games</th>
+                    <th>Trivia Games</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!--filled automatically by js file-->
+            </tbody>
+        </table>
+    </div>
+
+    <footer>
+        <b>Designed by Garvit Saraf, Google Cloud Arcade Facilitator BIT</b>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
