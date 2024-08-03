@@ -3,32 +3,32 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background: url('bg.gif') no-repeat center center fixed; /* Add GIF background */
-    background-size: cover; /* Ensure the background covers the entire page */
+    background: url('bg.gif') no-repeat center center fixed;
+    background-size: cover;
     color: #202124;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Ensures full height */
+    min-height: 100vh;
 }
 
 /* Header Styles */
 .header {
     display: flex;
     align-items: center;
-    background-color: rgb(255, 103, 65); /* Google Blue with opacity */
+    background-color: rgb(255, 103, 65);
     color: white;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: relative;
-    flex-shrink: 0; /* Prevents shrinking of the header */
-    flex-direction: column; /* Stack items vertically on small screens */
+    flex-shrink: 0;
+    flex-direction: column;
     text-align: center;
 }
 
 .header-icon {
     width: 60px;
     height: 60px;
-    margin-bottom: 10px; /* Adjust spacing for stacked layout */
+    margin-bottom: 10px;
     border-radius: 50%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -46,9 +46,9 @@ body {
     max-width: 100%;
     padding: 20px;
     box-sizing: border-box;
-    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background for content readability */
+    background: rgba(255, 255, 255, 0.8);
     border-radius: 8px;
-    overflow: auto; /* Ensure scrolling if content overflows */
+    overflow: auto;
 }
 
 /* Medal Section Styling */
@@ -61,14 +61,14 @@ body {
     justify-content: space-around;
     align-items: center;
     margin-bottom: 20px;
-    flex-wrap: wrap; /* Wraps items if they overflow */
+    flex-wrap: wrap;
 }
 
 .medal-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 10px; /* Adds spacing around items */
+    margin: 10px;
 }
 
 .medal {
@@ -102,37 +102,36 @@ body {
 
 /* Medal Color Styles */
 .gold {
-    background-color: #ffd700; /* Gold */
+    background-color: #ffd700;
 }
 
 .silver {
-    background-color: #c0c0c0; /* Silver */
+    background-color: #c0c0c0;
 }
 
 .bronze {
-    background-color: #cd7f32; /* Bronze */
+    background-color: #cd7f32;
 }
 
 .table-wrapper {
-    overflow-x: auto; /* Adds horizontal scrollbar */
-    -webkit-overflow-scrolling: touch; /* For smoother scrolling on mobile */
-    width: 100%; /* Ensures the wrapper takes full width */
-    box-sizing: border-box; /* Ensures padding/margins are included in width */
-    padding: 0; /* Remove padding if necessary */
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0;
 }
 
 /* Table Styling with Frosted Glass Effect */
 table {
-    width: 100%; /* Ensures table takes full width of the wrapper */
+    width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-    background: rgba(255, 255, 255, 0.3); /* Semi-transparent white */
-    backdrop-filter: blur(10px); /* Frosted glass effect */
-    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: table; /* Ensures table layout */
 }
 
 table, th, td {
@@ -147,31 +146,31 @@ th, td {
 }
 
 th {
-    background-color: rgba(42, 42, 42, 0.9); /* Google Blue with opacity */
+    background-color: rgba(42, 42, 42, 0.9);
     color: white;
     font-weight: 500;
 }
 
 tr:nth-child(even) {
-    background-color: rgba(249, 249, 249, 0.7); /* Light gray with opacity */
+    background-color: rgba(249, 249, 249, 0.7);
 }
 
 tr:hover {
-    background-color: rgba(241, 241, 241, 0.7); /* Slightly darker on hover */
+    background-color: rgba(241, 241, 241, 0.7);
 }
 
 /* Status Colors */
 .status.green {
-    color: #34a853; /* Green */
+    color: #34a853;
 }
 
 .status.red {
-    color: #ea4335; /* Red */
+    color: #ea4335;
 }
 
 /* Launch Icon Styling */
 .launch-icon {
-    color: #4285f4; /* Google Blue */
+    color: #4285f4;
     text-decoration: none;
     font-size: 1.5rem;
     display: inline-flex;
@@ -184,7 +183,7 @@ tr:hover {
 }
 
 .launch-icon:hover {
-    color: #357ae8; /* Darker Google Blue */
+    color: #357ae8;
     transform: scale(1.1);
     transition: color 0.3s ease, transform 0.2s ease;
 }
@@ -225,7 +224,6 @@ footer {
     }
 
     .table-wrapper {
-        overflow-x: auto; /* Ensures horizontal scrollbar */
         padding: 0;
     }
 
@@ -237,7 +235,7 @@ footer {
     }
 
     th, td {
-        display: table-cell; /* Ensures horizontal alignment */
+        display: table-cell;
         text-align: left;
         padding: 10px;
     }
@@ -287,7 +285,6 @@ footer {
     }
 
     .table-wrapper {
-        overflow-x: auto; /* Ensures horizontal scrollbar */
         padding: 0;
     }
 
