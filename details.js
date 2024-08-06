@@ -42,9 +42,25 @@ document.addEventListener("DOMContentLoaded", () => {
             if (contestant) {
                 // Split arcadeGames by "|"
                 const arcadeGamesList = contestant.bname.split('|').map(game => game.trim());
+                const arcadeGamestriviaList = contestant.tgname.split('|').map(game => game.trim());
+                const arcadeGamesgameList = contestant.agname.split('|').map(game => game.trim());
 
                 // Create table rows for arcadeGames with serial numbers
                 const arcadeGamesRows = arcadeGamesList.map((game, index) => `
+                    <tr>
+                        <td>${index + 1}</td>
+                        <td>${game}</td>
+                    </tr>
+                `).join('');
+
+                const arcadeGamestriviaRows = arcadeGamestriviaList.map((game, index) => `
+                    <tr>
+                        <td>${index + 1}</td>
+                        <td>${game}</td>
+                    </tr>
+                `).join('');
+
+                const arcadeGamesgameRows = arcadeGamesgameList.map((game, index) => `
                     <tr>
                         <td>${index + 1}</td>
                         <td>${game}</td>
@@ -101,6 +117,28 @@ document.addEventListener("DOMContentLoaded", () => {
                         </thead>
                         <tbody>
                             ${arcadeGamesRows}
+                        </tbody>
+                    </table><hr>
+                                        <table>
+                        <thead>
+                            <tr>
+                                <th>SL.No.</th>
+                                <th>Trivia Badge</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${arcadeGamestriviaRows}
+                        </tbody>
+                    </table><hr>
+                                        <table>
+                        <thead>
+                            <tr>
+                                <th>SL.No.</th>
+                                <th>Game Badge</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${arcadeGamesgameRows}
                         </tbody>
                     </table>
                 `;
